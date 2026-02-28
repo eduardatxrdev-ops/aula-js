@@ -32,3 +32,10 @@ const usuarioEncontrado = listaDeUsuarios.find(u => u.nome === "Carla")
 
 console.log(usuarioEncontrado)
 console.log(`Nome: ${usuarioEncontrado.nome} \nIdade: ${usuarioEncontrado.idade}`)
+
+//Total acumula a soma das idades
+// 0 é o valor inicial da contagem
+//u é o onjeto para acessar a variável que contém a idade
+console.log ("\nSoma as idades de todos os usuários: ")
+const somaIdades = listaDeUsuarios.reduce ((total, u) => total + u.idade, 0)
+console.log(somaIdades)
