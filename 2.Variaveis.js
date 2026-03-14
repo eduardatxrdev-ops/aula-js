@@ -1,3 +1,0 @@
-// variaveis
-
-//forma mais antiga

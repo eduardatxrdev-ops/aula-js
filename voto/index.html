@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Votação</title>
 </head>
 <body>
-    <h1>Eu posso votar?</h1>
-    <label>Idade: </label>
-    <input type="number" id="idade">
+    
+        <main>
+            <h1>EU POSSO VOTAR?</h1>
+            <br>
+            <p id="resultado">DIGITE SUA IDADE...</p>
+            <br>
+            <label>IDADE:</label>
+            <input type="number" id="idade">
+            <br>
+            <br>
+            <button onclick="verificarvoto()">CONFIRMA</button>
+        </main>
+            
+    
 
-    <button onclick="verificarvoto()">Calcular</button>
         <p id="resultado"></p>
 
     <script src="script.js"></script>

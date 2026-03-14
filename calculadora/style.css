@@ -1,72 +1,118 @@
-*{
+/* Importando uma fonte que lembra escrita escolar */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-   background-image: linear-gradient(to bottom, #d82701,#a50066);
-}
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 45px;
-    color: rgb(252, 252, 252);
-    text-align: center;
-    line-height: 200px;
-    width: 500px;
-    height: 200px;
-    margin: auto;
-}
-main{
-    margin:auto;
-    height: 800px;
-    width: 400px;
-    border: 5px solid rgb(255, 255, 255);
-    background-color: rgb(165, 165, 165);
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
-}
-.container{
-    text-align: center;
-    height: px;
-    line-height: 50px;
+
+body {
+    /* Fundo de mesa de madeira escolar */
+    background-color: #8b4513;
+    background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    height: 100vh;
+    font-family: 'Indie Flower', cursive;
 }
-#gerarBotao,#limparBotao{
-    text-decoration: none;
-    text-align: center;
-    background-color:white;
-    box-shadow: 1px 1px  3px black;
-    border-radius: 15px;
-    width: 150px;
-    cursor: auto;
-    transition: transform 0.3s, border 0.3s;
-    font-size: 1em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#gerarBotao:hover, #limparBotao:hover{
-    color:rgb(255, 60, 0);
-    background-color: rgb(255, 255, 255);
-    transform: translate(5px 5px);
-}
-#resultadoTabuada{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(252, 252, 252);
-    text-align: center;
-    font-size: 2em;
-}
-label{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin-left: 10%;
-}
-#numeroInput{
-    width: 100px;
-    margin: 20px;
-    text-align: center;
-    border-radius: 15px;
-    border: 1px solid rgb(0, 0, 0);
 
+main {
+    /* Papel de caderno */
+    background-color: #fff;
+    background-image:
+        linear-gradient(90deg, transparent 39px, #abced4 39px, #abced4 41px, transparent 41px),
+        linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.5rem;
+    width: 350px;
+    padding: 40px 20px 40px 60px; /* Espaço para a margem do caderno */
+    border-radius: 2px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    transform: rotate(-2deg); /* Folha levemente inclinada */
+}
+
+/* Efeito de folha arrancada no topo */
+main::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background: radial-gradient(circle, transparent 40%, #8b4513 41%);
+    background-size: 20px 20px;
+    background-position: 0 -10px;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #3498db; /* Linha azul de caneta */
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    color: #2980b9;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #e74c3c; /* Vermelho borracha/correção */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #c0392b;
+    transition: all 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #ff4d4d;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+#resultado {
+    margin-top: 25px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #27ae60; /* Verde de "nota dez" */
+    text-align: center;
+    min-height: 40px;
+}
+
+/* Removendo as setinhas do input number para não quebrar o visual */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
